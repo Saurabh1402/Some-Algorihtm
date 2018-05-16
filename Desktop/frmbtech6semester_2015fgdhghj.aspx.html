@@ -1,0 +1,986 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+
+</title>
+  <style type="text/css" media="print">
+.disp
+{
+	display:none;
+	}
+</style>
+<link href="frmbtech6semester_2015fgdhghj.aspx_files/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="frmbtech6semester_2015fgdhghj.aspx_files/jquery.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery("#dropmenu ul").css({ display: "none" }); // Opera Fix 
+        jQuery("#dropmenu li").hover(function() {
+            jQuery(this).find('ul:first').css({ visibility: "visible", display: "none" }).show(300);
+        }, function() {
+            jQuery(this).find('ul:first').css({ visibility: "hidden" });
+        });
+    });
+    function initAjaxProgress() {
+        var pageHeight = (document.documentElement && document.documentElement.scrollHeight) ? document.documentElement.scrollHeight : (document.body.scrollHeight > document.body.offsetHeight) ? document.body.scrollHeight : document.body.offsetHeight;
+        //SET HEIGHT OF BACKGROUND
+        var bg = document.getElementById('ajaxProgressBg');
+        bg.style.height = (pageHeight + 1000) + 'px';
+        //POSITION THE PROGRESS INDICATOR ON INITIAL LOAD
+        reposAjaxProgress();
+        //REPOSITION THE PROGRESS INDICATOR ON SCROLL
+        window.onscroll = reposAjaxProgress;
+    }
+
+    function reposAjaxProgress() {
+        var div = document.getElementById('ajaxProgress');
+
+        var st = document.body.scrollTop;
+        if (st == 0) {
+            if (window.pageYOffset) st = window.pageYOffset;
+            else st = (document.body.parentElement) ? document.body.parentElement.scrollTop : 0;
+        }
+        div.style.top = 150 + st + "px";
+    }
+</script>
+
+    
+    <style type="text/css">
+        .style3
+        {
+            height: 20px;
+        }
+        .style4
+        {
+            width: 39%;
+        }
+    </style>
+</head>
+
+<body onload="initAjaxProgress();">
+    <form name="aspnetForm" method="post" action="frmbtech6semester_2015fgdhghj.aspx" id="aspnetForm">
+<div>
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMjg0MTQ4ODkPFgIeBENvZGUFBXNlcHRiFgJmD2QWAgIDD2QWAgIFD2QWBgIBDxYCHgdWaXNpYmxlaBYGAgEPDxYCHgRUZXh0BQoxMjA5MTEwMDgzZGQCBQ8PFgIeCEltYWdlVXJsBboQZGF0YTppbWFnZS9qcGc7YmFzZTY0LFIwbEdPRGxoY2dBeUFQY0FBQUFBQUFBQU13QUFaZ0FBbVFBQXpBQUEvd0FyQUFBck13QXJaZ0FybVFBcnpBQXIvd0JWQUFCVk13QlZaZ0JWbVFCVnpBQlYvd0NBQUFDQU13Q0FaZ0NBbVFDQXpBQ0Evd0NxQUFDcU13Q3FaZ0NxbVFDcXpBQ3Evd0RWQUFEVk13RFZaZ0RWbVFEVnpBRFYvd0QvQUFEL013RC9aZ0QvbVFEL3pBRC8vek1BQURNQU16TUFaak1BbVRNQXpETUEvek1yQURNck16TXJaak1ybVRNcnpETXIvek5WQUROVk16TlZaak5WbVROVnpETlYvek9BQURPQU16T0Faak9BbVRPQXpET0Evek9xQURPcU16T3Faak9xbVRPcXpET3EvelBWQURQVk16UFZaalBWbVRQVnpEUFYvelAvQURQL016UC9aalAvbVRQL3pEUC8vMllBQUdZQU0yWUFabVlBbVdZQXpHWUEvMllyQUdZck0yWXJabVlybVdZcnpHWXIvMlpWQUdaVk0yWlZabVpWbVdaVnpHWlYvMmFBQUdhQU0yYUFabWFBbVdhQXpHYUEvMmFxQUdhcU0yYXFabWFxbVdhcXpHYXEvMmJWQUdiVk0yYlZabWJWbVdiVnpHYlYvMmIvQUdiL00yYi9abWIvbVdiL3pHYi8vNWtBQUprQU01a0FacGtBbVprQXpKa0EvNWtyQUprck01a3JacGtybVprcnpKa3IvNWxWQUpsVk01bFZacGxWbVpsVnpKbFYvNW1BQUptQU01bUFacG1BbVptQXpKbUEvNW1xQUptcU01bXFacG1xbVptcXpKbXEvNW5WQUpuVk01blZacG5WbVpuVnpKblYvNW4vQUpuL001bi9acG4vbVpuL3pKbi8vOHdBQU13QU04d0Fac3dBbWN3QXpNd0EvOHdyQU13ck04d3Jac3dybWN3cnpNd3IvOHhWQU14Vk04eFZac3hWbWN4VnpNeFYvOHlBQU15QU04eUFac3lBbWN5QXpNeUEvOHlxQU15cU04eXFac3lxbWN5cXpNeXEvOHpWQU16Vk04elZac3pWbWN6VnpNelYvOHovQU16L004ei9ac3ovbWN6L3pNei8vLzhBQVA4QU0vOEFadjhBbWY4QXpQOEEvLzhyQVA4ck0vOHJadjhybWY4cnpQOHIvLzlWQVA5Vk0vOVZadjlWbWY5VnpQOVYvLytBQVArQU0vK0FaditBbWYrQXpQK0EvLytxQVArcU0vK3FaditxbWYrcXpQK3EvLy9WQVAvVk0vL1Zadi9WbWYvVnpQL1YvLy8vQVAvL00vLy9adi8vbWYvL3pQLy8vd0FBQUFBQUFBQUFBQUFBQUNINUJBRUFBUHdBTEFBQUFBQnlBRElBQUFqL0FQY0pIRWl3b01HRENCTXFYTWl3b2NPSEVDTktuRWl4b3NXTEdETnEzTWl4bzhlUElFT0tIRW15cE1tVEtGT3FYTW15cGN1WE1HUEtuRW16cHMyYk9IUHEzTW16cDg5OStzeElHRXFVUXJTZlFJVks0Q0FTR05HblJDZWM4cGxQS1pPUVRxRnFsWEFuWVZDb1YwSHFzelIwdzFHQytXd01qUU15SDQraFJndG1sUkMzNE5ldFN6L2VyV0JRSHRHdUg0UDlQVGdYOEVDL2VJdWVKWGlYNlQ3RUVxUXFiR3p3Mk9DUFdTWDNKV29FN2R1eWpKWFNYU3pRN1ZBbWtLRjJQbGoxdEVGMlF6Vjd0RHoweU9SUUEvVkJJbXJiNE56ZWh4TkRkU3hRMzdMSHZIM0RKYzF4M3RPNkN5RVROMGgyTk1IVWthY0tUQjAyS1Y3SFk1ZUwvNjMrdFB0QjNiRzFINFJzWGpEUjZhVS8xNzJybGZodUNXYjNtUjVxdU9MUWZmZEJKWnRuUS9HVjBIN1RRUVpjUWV0d1Z0dytjNVZYbkZJY3pQUFpjQllKTnhRREF5TDNWSDRHNlFNR2FBTmxCWjFkRk1vbEhvRWE0c2RjUkMyMnlFQ0xGWnlGbm5VSVZRZmRqVFVXTkk5by9BMjBYMTRjcFJYamtmZ1JWQjJJaEswbzBKS2JFYlZCaUVwMW1CRjlkVVdJcEkwcEpwU1plcFFWSkIxQ1kwWVVab2lXekVpQmR1NTFpT1JUWHNLRlcybHFFVWtRYlZZT2RKK0JFTjBJSDBIeHhEWW5aUDB0OUNaVTBMVW13V29FWlRabms5bEpaT0tMVDY2b29FU0U3blBvakVQMW9ad0VQU0pFMjVxWUtoYWxpeE9TQ0ZHbUNBMkpGNmRiaGV4NlVJTVNNRkNvUTFvQ2RtT1FBOUc2S0VKM1FkZW1lZ2I1dW1DZ20vNG5FREtYU1VSZVlndDY1OXFuRWl6b2FFTFZEVGdwaW9jcUs1R0ZlT1hwcW1HcFRkbm9lMlJ5Q3QrMmFOWFpoRUhDWWNUcWdVQnVkZUkrejhvYVgzb0ZMY21jb294U1dSYWxKR241MUorS0hqeVFlN1hadGVlcGo1NzZaMG9CVGhCeGFHVTlXNS9BcUJMRThLMGxOcXNUdU5WQ2lCZkl3VEtIYkpLc2ZjYm5UdXdGTjFRRHhOcWxNVmNDUlhpdmlDTHJCTm5GRHBITTc2NUVoWnJheERqQkZ1bEU5RmxjS1g0M2Y0alVxRUJiWkJ5QVRQbXFHbEltNHlqU2tDRHZkT085WEova2I5a3FYWjFQd0RRRkJBQTdBQUFBQUFBQUFBQUFBQUE9ZGQCCQ8PFgIfAgUFc2VwdGJkZAIDDxYCHwFnFlICAw8PFgIfAgUjU0FVUkFCSCBWSVNIV0FLQVJNQSAgICAgICAgICAgICAgICBkZAIFDw8WAh8DBUVodHRwOi8vb25saW5lLnVwdHUuYWMuaW4vRXhhbTIwMTQvU3R1ZGVudEltYWdlLzYzNTY0NjAzODMzNzg1MjAwMC5qcGdkZAILDw8WAh8CBSNHT1BBTCBWSVNIV0FLQVJNQSAgICAgICAgICAgICAgICAgIGRkAg0PDxYCHwIFCjEyMDkxMTAwODNkZAIPDw8WAh8CZWRkAhEPDxYCHwIFClJFR1VMQVIgICBkZAITDw8WAh8CBS1CLiBUZWNoLiBDb21wdXRlciBTY2llbmNlIGFuZCBFbmdpbmVlcmluZygxMClkZAIVDw8WAh8CBSpKLlMuUy4gQWNhZGVteSBPZiBUZWNobmljYWwgRWR1Y2F0aW9uKDA5MSlkZAIXDxYCHwFnFgpmD2QWAgIBDw8WAh8CBQpFSFU1MDEgICAgZGQCAQ9kFgICAQ8PFgIfAgUkRU5HSU5FRVJJTkcgQU5EIE1BTkFHRVJJQUwgRUNPTk9NSUNTZGQCAg9kFgICAQ8PFgIfAgUEMDQ5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" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6A590ED5" type="hidden">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwK+1LPRDQK9vIn8DAKHjfr5BpU/zUR6WjFysDd19Q1gFQNIZ5BJ" type="hidden">
+</div>
+    
+    <div>
+        <div id="wrapper">
+    	    <div id="inner_area"><div id="logo_head"></div></div>
+                <div class="box_top">
+ <div class="heading_con1">
+      <div id="box1_new" class="mainmenu_new">
+                            
+                            <a href="http://uptu.ac.in/" id="ctl00_btnHome" style="color:White">
+                                Home</a>
+                            
+                        </div>
+                    </div>
+ </div>
+           <div id="banner_area"> 
+        <div id="content_area">
+        <div id="ctl00_box1">
+ 
+        </div>
+        <div id="box1_content"> 
+           
+                
+    <b>
+        <center>
+            <span style="font-size: 20px">Uttar Pradesh Technical University, Lucknow, India</span>
+            <br>
+            <u>B.Tech Third Year Result 2014-15</u><br>
+            <br>
+        </center>
+        <b>
+            
+        </b><b>
+            <center>
+                <div id="ctl00_ContentPlaceHolder1_divRes">
+                    <div style="text-align: right">
+                        <span style="text-align: right" class="disp">
+                            <input name="ctl00$ContentPlaceHolder1$ImageButton1" id="ctl00_ContentPlaceHolder1_ImageButton1" src="frmbtech6semester_2015fgdhghj.aspx_files/Print.jpg" onclick="print();" style="border-width:0px;" type="image"></span>
+                    </div>
+                    <table style="border-collapse: collapse;
+                        font-size: 11px; margin-left: 5px;" width="100%" border="1" bordercolor="#E3DDD5" cellpadding="0" cellspacing="0">
+                        <tbody style="text-align: left;">
+                            <tr>
+                                <td style="text-align: left;" width="30%">
+                                    <b>Name:</b>
+                                </td>
+                                <td style="text-align: left;" width="55%">
+                                    <b>
+                                        <span id="ctl00_ContentPlaceHolder1_lblName">SAURABH VISHWAKARMA                </span>
+                                    </b>
+                                </td>
+                                <td style="text-align: center;" rowspan="5" width="15%">
+                                    <img id="ctl00_ContentPlaceHolder1_imgstud" src="frmbtech6semester_2015fgdhghj.aspx_files/635646038337852000.jpg" style="height:85px;border-width:0px;border: solid 1px grey">
+                                </td>
+                            </tr>
+                            <tr style="display:none;">
+                                <td style="text-align: left;" width="30%">
+                                    <span id="ctl00_ContentPlaceHolder1_lblhinditext">Name in Hindi</span>
+                                </td>
+                                <td style="text-align: left;" width="55%">
+                                    <b>
+                                        <span id="ctl00_ContentPlaceHolder1_lblHNAME"></span>
+                                    </b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">
+                                    <b>Father's Name:</b>
+                                </td>
+                                <td style="text-align: left;">
+                                    <b>
+                                        <span id="ctl00_ContentPlaceHolder1_lblF_NAME">GOPAL VISHWAKARMA                  </span>
+                                    </b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">
+                                    <b>Roll No:</b>
+                                </td>
+                                <td style="text-align: left;">
+                                    <b>
+                                        <span id="ctl00_ContentPlaceHolder1_lblROLLNO">1209110083</span>
+                                    </b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">
+                                    Enrollment No.:
+                                </td>
+                                <td style="text-align: left;">
+                                    <b>
+                                        <span id="ctl00_ContentPlaceHolder1_lblEN_NO"></span>
+                                    </b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">
+                                    <b>Status:</b>
+                                </td>
+                                <td style="text-align: left;">
+                                    <b>
+                                        <span id="ctl00_ContentPlaceHolder1_lblStatus">REGULAR   </span>
+                                    </b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">
+                                    <b>Course:</b>
+                                </td>
+                                <td style="text-align: left;" colspan="2">
+                                    <b>
+                                        <span id="ctl00_ContentPlaceHolder1_lblCourse">B. Tech. Computer Science and Engineering(10)</span>
+                                    </b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">
+                                    <b>Institute Name (Code):</b>
+                                </td>
+                                <td style="text-align: left;" colspan="2">
+                                    <b>
+                                        <span id="ctl00_ContentPlaceHolder1_lblInstName">J.S.S. Academy Of Technical Education(091)</span>
+                                    </b>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <table style="border-collapse: collapse; font-size: 11px" width="100%" border="1" bordercolor="#E3DDD5" cellpadding="0" cellspacing="0" align="center">
+                        <tbody><tr>
+                            <td valign="top" width="50%">
+                                <table style="border-collapse: collapse; font-size: 11px" width="100%" border="1" bordercolor="#E3DDD5" cellpadding="0" cellspacing="0" align="center">
+                                    <tbody>
+                                        <tr>
+                                            <th width="100%">
+                                                5th Semester Marks details
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" width="100%">
+                                                <table style="border-collapse: collapse; font-size: 11px" width="100%" border="1" cellpadding="2px" cellspacing="2px">
+                                                    <tbody style="text-align: left">
+                                                        <tr style="font-size: 11px">
+                                                            <td style="text-align: left;" width="8%">
+                                                                <b>Paper Code</b>
+                                                            </td>
+                                                            <td style="text-align: left;" width="58%">
+                                                                <b>Paper Name </b>
+                                                            </td>
+                                                            <td width="9%" align="center">
+                                                                <b>External Marks</b>
+                                                            </td>
+                                                            <td width="10%" align="center">
+                                                                <b>Sessional Marks</b>
+                                                            </td>
+                                                           
+                                                            <td width="7%" align="center">
+                                                                <b>Credit</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr id="ctl00_ContentPlaceHolder1_A1">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblA1ID">EHU501    </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblA1IS">ENGINEERING AND MANAGERIAL ECONOMICS</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblA1TE">049 </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblA1TS">044</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblA1CR">3 </span>
+                                                            </td>
+</tr>
+
+                                                        <tr id="ctl00_ContentPlaceHolder1_B1">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblB1ID">ECS504    </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblB1IS">COMPUTER GRAPHICS</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblB1TE">015 </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblB1TS">016</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblB1CR">3 </span>
+                                                            </td>
+</tr>
+
+                                                        <tr id="ctl00_ContentPlaceHolder1_C1">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblC1ID">ECS501    </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblC1IS">OPERATING SYSTEM</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblC1TE">051 </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblC1TS">043</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblC1CR">4 </span>
+                                                            </td>
+</tr>
+
+                                                        <tr id="ctl00_ContentPlaceHolder1_D1">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblD1ID">ECS502    </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblD1IS">DESIGN AND ANALYSIS OF ALGORITHMS</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblD1TE">046 </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblD1TS">033</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblD1CR">4 </span>
+                                                            </td>
+</tr>
+
+                                                        <tr id="ctl00_ContentPlaceHolder1_E1">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblE1ID">ECS503    </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblE1IS">OBJECT ORIENTED TECHNIQUES</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblE1TE">043 </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblE1TS">040</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblE1CR">4 </span>
+                                                            </td>
+</tr>
+
+                                                        <tr id="ctl00_ContentPlaceHolder1_F1">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblF1ID">ECS505    </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblF1IS">GRAPH THEORY</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblF1TE">031 </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblF1TS">018</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblF1CR">3 </span>
+                                                            </td>
+</tr>
+
+                                                        
+                                                        
+                                                        <tr id="ctl00_ContentPlaceHolder1_AP1">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblAP1ID">ECS551    </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblAP1IS">OPERATING SYSTEM LAB*</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblA1PE">022 </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblA1PS">023</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblAP1CR">1 </span>
+                                                            </td>
+</tr>
+
+                                                        <tr id="ctl00_ContentPlaceHolder1_BP1">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblBP1ID">ECS552    </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblBP1IS">ALGORITHMS LAB*</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblB1PE">021 </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblB1PS">018</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblBP1CR">1 </span>
+                                                            </td>
+</tr>
+
+                                                        <tr id="ctl00_ContentPlaceHolder1_CP1">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblCP1ID">ECS553    </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblCP1IS">OBJECT ORIENTED TECHNIQUES LAB*</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblC1PE">023 </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblC1PS">020</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblCP1CR">1 </span>
+                                                            </td>
+</tr>
+
+                                                        <tr id="ctl00_ContentPlaceHolder1_DP1">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblDP1ID">ECS554    </span></b>
+                                                            </td>
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblDP1IS">COMPUTER GRAPHICS LAB*</span></b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblD1PE">019 </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblD1PS">021</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblDP1CR">1 </span>
+                                                            </td>
+</tr>
+
+                                                        
+                                                        <tr id="ctl00_ContentPlaceHolder1_tr1">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblGP1ID">GP501 </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblGP1IS">GENERAL PROFICIENCY</span>
+                                                                </b>
+                                                            </td>
+	<td colspan="4" align="center">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblGP1">044</span>
+                                                                </b>
+                                                            </td>
+</tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td valign="top" width="50%">
+                                <table style="border-collapse: collapse; font-size: 11px" width="100%" border="1" bordercolor="#E3DDD5" cellpadding="0" cellspacing="0" align="center">
+                                    <tbody>
+                                        <tr>
+                                            <th width="100%">
+                                                6th Semester Marks details
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" width="100%">
+                                                <table style="border-collapse: collapse; font-size: 11px" width="100%" border="1" cellpadding="2px" cellspacing="2px">
+                                                    <tbody style="text-align: left">
+                                                        <tr style="font-size: 11px">
+                                                            <td style="text-align: left;" width="8%">
+                                                                <b>Paper Code</b>
+                                                            </td>
+                                                            <td style="text-align: left;" class="style4">
+                                                                <b>Paper Name </b>
+                                                            </td>
+                                                            <td width="9%" align="center">
+                                                                <b>External Marks</b>
+                                                            </td>
+                                                            <td width="10%" align="center">
+                                                                <b>Sessional Marks</b>
+                                                            </td>
+                                                            <td width="7%" align="center">
+                                                                <b>Credit</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr id="ctl00_ContentPlaceHolder1_A2">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblA2ID">EHU601      </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;" class="style4">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblA2IS">INDUSTRIAL MANAGEMENT</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblA2TE">046 </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblA2TS">038</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblA2CR">3 </span>
+                                                            </td>
+</tr>
+
+                                                        <tr id="ctl00_ContentPlaceHolder1_B2">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblB2ID">ECS604      </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;" class="style4">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblB2IS">WEB TECHNOLOGY</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblB2TE">025 </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblB2TS">020</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblB2CR">3 </span>
+                                                            </td>
+</tr>
+
+                                                        <tr id="ctl00_ContentPlaceHolder1_C2">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblC2ID">ECS601      </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;" class="style4">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblC2IS">COMPUTER NETWORK</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblC2TE">031 </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblC2TS">034</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblC2CR">4 </span>
+                                                            </td>
+</tr>
+
+                                                        <tr id="ctl00_ContentPlaceHolder1_D2">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblD2ID">ECS602      </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;" class="style4">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblD2IS">SOFTWARE ENGINEERING</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblD2TE">047 </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblD2TS">044</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblD2CR">4 </span>
+                                                            </td>
+</tr>
+
+                                                        <tr id="ctl00_ContentPlaceHolder1_E2">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblE2ID">ECS603      </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;" class="style4">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblE2IS">COMPILER DESIGN</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblE2TE">035 </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblE2TS">036</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblE2CR">4 </span>
+                                                            </td>
+</tr>
+
+                                                        <tr id="ctl00_ContentPlaceHolder1_F2">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblF2ID">EIT505      </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;" class="style4">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblF2IS">INFORMATION SECURITY AND CYBER LAWS</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblF2TE">021 </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblF2TS">018</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblF2CR">3 </span>
+                                                            </td>
+</tr>
+
+                                                        
+                                                        
+                                                        <tr id="ctl00_ContentPlaceHolder1_AP2">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblAP2ID">ECS651      </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;" class="style4">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblAP2IS">COMPUTER NETWORK LAB*</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblA2PE">020 </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblA2PS">024</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblAPCR">1 </span>
+                                                            </td>
+</tr>
+
+                                                        <tr id="ctl00_ContentPlaceHolder1_BP2">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblBP2ID">ECS652      </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;" class="style4">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblBP2IS">WEB TECHNOLOGY BASED SOFTWARE ENGINEERING LAB*</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblB2PE">022 </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblB2PS">018</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblBPCR">1 </span>
+                                                            </td>
+</tr>
+
+                                                        <tr id="ctl00_ContentPlaceHolder1_CP2">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblCP2ID">ECS653      </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;" class="style4">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblCP2IS">COMPILER LAB*</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblC2PE">023 </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblC2PS">024</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblCP2CR">1 </span>
+                                                            </td>
+</tr>
+
+                                                        <tr id="ctl00_ContentPlaceHolder1_DP2">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblDP2ID">ECS654      </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;" class="style4">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblDP2IS">SEMINAR</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblD2PE">--- </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblD2PS">042</span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblDP2CR">1 </span>
+                                                            </td>
+</tr>
+
+                                                       <tr id="ctl00_ContentPlaceHolder1_EP2" style="display:none;">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblz1ID">          </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblZ1Sub">HS/ Industrial Management</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblZ1TE">    </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblZ1TS">   </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblZ1CR"></span>
+                                                            </td>
+</tr>
+
+                                                        <tr id="ctl00_ContentPlaceHolder1_trzid" style="display:none;">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblZ2ID">          </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblZ2Sub">HS/ Industrial Management</span>
+                                                                </b>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblZ2TE">    </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblZ2TS">          </span>
+                                                            </td>
+	<td align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblZ2CR"></span>
+                                                            </td>
+</tr>
+
+                                                        <tr id="ctl00_ContentPlaceHolder1_GP2">
+	<td style="text-align: left;">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblGP2ID">GP601 </span>
+                                                                </b>
+                                                            </td>
+	<td style="text-align: left;" class="style4">
+                                                                <b>
+                                                                    <span id="ctl00_ContentPlaceHolder1_lblGP2IS">GENERAL PROFICIENCY</span>
+                                                                </b>
+                                                            </td>
+	<td colspan="3" align="center">
+                                                                <span id="ctl00_ContentPlaceHolder1_lblGP2">045</span>
+                                                            </td>
+</tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                    <br>
+                    <table id="ctl00_ContentPlaceHolder1_tab1" style="border-collapse: collapse; font-size: 11px" width="100%" border="1" bordercolor="#E3DDD5" cellpadding="0" cellspacing="0" align="center">
+	<tbody><tr>
+		<td style="text-align: left;" class="style3" width="50%">
+                                    <b>Third Year Credits Earned</b>
+                                </td>
+		<td style="text-align: left;" class="style3">
+                                    Practical:
+                                    <span id="ctl00_ContentPlaceHolder1_lblcr_2P"></span>
+                                </td>
+		<td style="text-align: left;" class="style3">
+                                    Theory:
+                                    <span id="ctl00_ContentPlaceHolder1_lblcr_2T"></span>
+                                </td>
+	</tr>
+</tbody></table>
+
+                    
+                      
+                   
+                    
+                          
+                    <table style="border-collapse: collapse; font-size: 11px" width="100%" border="1" bordercolor="#E3DDD5" cellpadding="0" cellspacing="0" align="center">
+                        <tbody>
+                            <tr>
+                                <td style="text-align: left;" width="33%">
+                                    <b>Carry Over Paper</b>
+                                </td>
+                                <td style="text-align: left; vertical-align: top" width="66%">
+                                    <span id="ctl00_ContentPlaceHolder1_lblCarryOver">                                                                                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <table style="border-collapse: collapse; font-size: 11px" width="100%" border="1" bordercolor="#E3DDD5" cellpadding="0" cellspacing="0" align="center">
+                        <tbody>
+                            <tr>
+                                <td style="text-align: left;" width="33%">
+                                    <b></b>
+                                </td>
+                                <th width="33%">
+                                    Status
+                                </th>
+                                <th width="33%">
+                                    Marks/Max. Marks
+                                </th>
+                            </tr>
+                         
+                             <tr>
+                                <td style="text-align: left;">
+                                    Third Year
+                                </td>
+                                <td align="center">
+                                    <b>
+                                        <span id="ctl00_ContentPlaceHolder1_lblSTAT_8">PASS  </span>
+                                    </b>&nbsp;
+                                </td>
+                                <td align="center">
+                                    <b>
+                                        <span id="ctl00_ContentPlaceHolder1_lblSTAT_8MRK">1253</span>
+                                    </b>/
+                                    <span id="ctl00_ContentPlaceHolder1_lblSTAT_8MAX">2000</span>
+                                </td>
+                            </tr>
+                            
+                             <tr>
+                            <td colspan="4"></td>
+                            </tr>
+                            
+                             <tr>
+                                <td colspan="3">
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" align="center">
+                                    Date Of Declaration of Result:<strong>
+                                        <span id="ctl00_ContentPlaceHolder1_lbldate">19/07/2015</span></strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" align="left">
+                                    <b><strong>
+                                        <span id="ctl00_ContentPlaceHolder1_lblnote2">Marks obtained in Human Values and Professional Ethics are not added in total marks obtained by the student</span>
+                                    </strong></b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" align="right">
+                                    <b></b>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="border-collapse: collapse;
+                        font-size: 11px" width="100%" border="1" bordercolor="#E3DDD5" align="center">
+                        <tbody style="text-align: left;">
+                            <tr>
+                                <td style="text-align: left;">
+                                    <b>Reasons</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">
+                                    <b>
+                                        <span id="ctl00_ContentPlaceHolder1_lblReson"></span>
+                                    </b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">
+                                    <b>
+                                        <span id="ctl00_ContentPlaceHolder1_lblnote">Note:-
+ As per Govt. notification no.3324/Solah-1-2013-1(3)/2009 dated 
+31.10.2013, Mahamaya Technical University, Noida has been merged with 
+G.B. Technical University, Lucknow &amp; The University established 
+after such merger shall be called Uttar Pradesh Technical University, 
+Lucknow</span>
+                                    </b>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table align="center">
+                        <tbody>
+                            <tr>
+                                <td align="center">
+                                    <br>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                
+            </center>
+        </b>
+        <center>
+            <span style="font-size: 10px">Note: University does not own for the errors or omissions,
+                if any, in this statement.
+                <br>
+            </span>
+            <a id="ctl00_ContentPlaceHolder1_lnkBack" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$lnkBack','')">Back</a>
+            <br>
+        </center>
+    </b>
+      
+                   
+        </div>
+    </div></div>
+            <div id="footer">
+                <div class="f_inner">
+                   This is the official Website of Uttar Pradesh Technical University, State 
+                    Government of Uttar Pradesh (India). | Best viewed in 1024*768 pixel resolution.<br>
+                    <a href="http://uptu.ac.in/copyright.html" target="_blank">Copyright Statement</a> |
+                    <a href="http://uptu.ac.in/hyperlinking-policy.html" target="_blank">Hyperlinking Policy</a> |
+                    <a href="http://uptu.ac.in/terms-and-conditions.html" target="_blank">Terms &amp; Conditions </a>|
+                    <a href="http://uptu.ac.in/privacy-policy.html" target="_blank">Privacy Policy</a> | <a href="http://uptu.ac.in/disclaimer.html" target="_blank">
+                    Disclaimer</a> | Powered by: <a href="http://www.otpl.co.in//" target="_blank">
+                    <strong>omni-NET</strong></a> through updesco</div>
+            </div>
+    </div> </div>
+    
+    </form>
+
+
+</body></html>
